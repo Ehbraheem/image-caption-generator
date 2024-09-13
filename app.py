@@ -4,7 +4,7 @@ from model import caption_image
 interface = gr.Interface(
     fn=caption_image,
     inputs=gr.Image(),
-    outputs='text',
+    outputs='textbox',
     title='Image Captioning',
     description="Web application for generating captions for images using pretrained BLIP models"
 )

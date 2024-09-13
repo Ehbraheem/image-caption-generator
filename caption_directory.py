@@ -9,7 +9,7 @@ def caption(directory: str, output_file='caption.txt'):
 
             start = time.perf_counter()
             print(f'Captioning of all images in {directory}\n----------------')
-            image_array = parse_dir(img_path)
+            image_array = parse_dir(directory)
             writer = write_caption_line(file)
 
             captions = parallel_execution(lambda val: (val[0], caption_image(val[1])), image_array)
